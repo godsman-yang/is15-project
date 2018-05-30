@@ -54,7 +54,7 @@ https://wpguide.usefulparadigm.com/posts/257
 - docker ps
 
 ### custom.rules
-$
+- alert icmp any any -> any any (msg:"Test ICMP"; sid:3000001;)
 
 ### 참고자료
 - Kali Linux - https://docs.kali.org/installation/kali-linux-hard-disk-install
