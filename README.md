@@ -53,6 +53,8 @@ https://wpguide.usefulparadigm.com/posts/257
 - $ docker run -d --name wordpress -v wordpress:/var/www/html --link mysql:mysql -e WORDPRESS_DB_HOST=mysql:3306 -e WORDPRESS_DB_PASSWORD=wordpress -p 80:80 wordpress:latest
 - docker ps
 
+### custom.rules
+$
 
 ### 참고자료
 - Kali Linux - https://docs.kali.org/installation/kali-linux-hard-disk-install
