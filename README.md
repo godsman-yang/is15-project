@@ -61,8 +61,10 @@ $ docker ps
 ```
 
 ### custom.rules
-- alert icmp any any -> any any (msg:"Test ICMP"; sid:3000001;)
-
+```
+alert icmp any any -> any any (msg:"Test ICMP"; sid:1000001;)
+alert tcp any any -> any any (msg:"Test TCP"; sid:1000002;)
+```
 ### 참고자료
 - Kali Linux - https://docs.kali.org/installation/kali-linux-hard-disk-install
 - Wordpress docker install - https://wpguide.usefulparadigm.com/posts/257
