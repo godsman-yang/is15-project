@@ -20,8 +20,9 @@ server1:
 #### 테스트 케이스 - 개인정보 (파일) 유출, 개인정보 정규표현식 작성
 
 ### Centos - docker 설치
-docker centos 설치
+#### docker centos 설치
 https://www.cyberciti.biz/faq/install-use-setup-docker-on-rhel7-centos7-linux/
+```
 # sudo yum remove docker docker-common docker-selinux docker-engine-selinux docker-engine docker-ce
 # sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 # sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -32,26 +33,32 @@ https://www.cyberciti.biz/faq/install-use-setup-docker-on-rhel7-centos7-linux/
 #  ip a list docker0
 # docker info
 # docker run hello-world
-
-docker-compose 설치
+```
+#### docker-compose 설치
 https://docs.docker.com/compose/install/#install-compose
+```
 # sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 # sudo chmod +x /usr/local/bin/docker-compose
 # docker-compose --version
+```
 
-root가 아닐때, user에서 sudo 사용하지 않으려면,
+#### root가 아닐때, user에서 sudo 사용하지 않으려면,
 https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
+```
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 $ docker run hello-world
 $ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 $ sudo chmod g+rwx "/home/$USER/.docker" -R
+```
 
-docker로 워드프레스 설치하기
+#### docker로 워드프레스 설치하기
 https://wpguide.usefulparadigm.com/posts/257
-- $ docker run -d --name mysql -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=wordpress -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress mysql:5.7
-- $ docker run -d --name wordpress -v wordpress:/var/www/html --link mysql:mysql -e WORDPRESS_DB_HOST=mysql:3306 -e WORDPRESS_DB_PASSWORD=wordpress -p 80:80 wordpress:latest
-- docker ps
+```
+$ docker run -d --name mysql -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=wordpress -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress mysql:5.7
+$ docker run -d --name wordpress -v wordpress:/var/www/html --link mysql:mysql -e WORDPRESS_DB_HOST=mysql:3306 -e WORDPRESS_DB_PASSWORD=wordpress -p 80:80 wordpress:latest
+$ docker ps
+```
 
 ### custom.rules
 - alert icmp any any -> any any (msg:"Test ICMP"; sid:3000001;)
