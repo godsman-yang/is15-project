@@ -64,6 +64,7 @@ $ docker ps
 ```
 alert icmp any any -> any any (msg:"Test ICMP"; sid:1000001;)
 alert tcp any any -> any any (msg:"Test TCP"; sid:1000002;)
+alert tcp any any -> any 80 (msg:"malcode download attack-maldown.html"; content:"maldown.html";)
 ```
 ### 참고자료
 - Kali Linux - https://docs.kali.org/installation/kali-linux-hard-disk-install
