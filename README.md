@@ -31,8 +31,8 @@ https://www.cyberciti.biz/faq/install-use-setup-docker-on-rhel7-centos7-linux/
 # sudo systemctl start docker.service
 # ip a
 #  ip a list docker0
-# docker info
-# docker run hello-world
+# sudo docker info
+# sudo docker run hello-world
 ```
 #### docker-compose 설치
 https://docs.docker.com/compose/install/#install-compose
