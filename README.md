@@ -30,7 +30,7 @@ https://www.cyberciti.biz/faq/install-use-setup-docker-on-rhel7-centos7-linux/
 # sudo systemctl enable docker.service
 # sudo systemctl start docker.service
 # ip a
-#  ip a list docker0
+# ip a list docker0
 # sudo docker info
 # sudo docker run hello-world
 ```
