@@ -47,6 +47,7 @@ https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-
 ```
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
+재접속 - exit - login
 $ docker run hello-world
 $ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 $ sudo chmod g+rwx "/home/$USER/.docker" -R
