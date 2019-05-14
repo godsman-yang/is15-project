@@ -21,9 +21,9 @@ server1:
 
 ### Centos - docker 설치
 #### docker centos 설치
-https://www.cyberciti.biz/faq/install-use-setup-docker-on-rhel7-centos7-linux/
+https://docs.docker.com/install/linux/docker-ce/centos/
 ```
-# sudo yum remove docker docker-common docker-selinux docker-engine-selinux docker-engine docker-ce
+# sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
 # sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 # sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 # sudo yum install docker-ce
